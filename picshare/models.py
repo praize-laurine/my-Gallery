@@ -6,3 +6,6 @@ class Images(models.Model):
     description = models.TextField()
 
 
+class Category(models.Model):
+    category_name = models.CharField(max_length = 30)
+

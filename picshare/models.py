@@ -8,10 +8,53 @@ class Images(models.Model):
     location = models.ForeignKey('Location')
     category = models.ForeignKey('Category')
 
+    def save_image(self):
+        self.save()
+
+    def delete_image(self):
+        self.delete()    
+
+    @classmethod
+    def search_by_category(cls,search_term):
+        images = cls.objects.filter(category__name__icontains = search_term)
+        return images  
+
+    def update_image(self, Name=None, category=None):
+        self.name = Name if Name else self.Name
+        self.category = category if category else self.category 
+        self.save()    
+
+    def __str__(self):
+        return self.name
+     
+
+
 
 class Category(models.Model):
     category_name = models.CharField(max_length = 30)
 
+    def save_category(self):
+        self.save()
+
+    def delete_category(self):
+        self.delete()
+
+    def __str__(self):
+        return self.category_name
+
 
 class Location(models.Model):
     location_name = models.CharField(max_length = 30)
+
+    def save_location(self):
+        self.save()
+
+    def delete_location(self):
+        self.delete()
+
+    @classmethod
+    def update_location(cls, id, value):
+        cls.objects.filter(id=id).update(location_name=value)
+
+    def __str__(self):
+        return self.location_name    

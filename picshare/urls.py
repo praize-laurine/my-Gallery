@@ -8,6 +8,7 @@ from django.conf.urls.static import static
 urlpatterns=[
     url('', views.index, name='index'),
     url('images/', views.images, name = 'images'),
-
-
+    url('search/', views.search_category_results, name = 'search_category_results')
 ]
+if settings.DEBUG:
+    urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

@@ -24,7 +24,7 @@ This is an online platform where I display my photos for others to see.A user ca
 - Create and Activate Virtual first:
 ```bash
 python3.6 -m virtualenv virtual
-```bash
+
 source virtual/bin/activate
 ```
 - Run this to test the appllication

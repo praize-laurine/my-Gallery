@@ -3,7 +3,7 @@
 ## Author: [praise-laurine](https://github.com/praise-laurine)
 
 ## Description
-This is an online platform where I display my photos for others to see.A user can click on an image to view the image details. A user can also copy an image link.
+This is an online application  platform where I display my photos for others to see.A user can click on an image to view the image details.
 
 # Set Up & Instalation Guide
 - Clone Project to your machine

@@ -1,4 +1,6 @@
 from django.shortcuts import render,redirect
+from django.http  import HttpResponse
+from .models import Images, Category
 
 # Create your views here.
 def index(request):
@@ -6,7 +8,8 @@ def index(request):
 
 def images(request):
     image = Images.objects.all()
-    return render(request, 'image.html', {'image' : image})    
+    print(image)
+    return render(request, 'images.html', {'image' : image})    
 
 
 def search_category_results(request):

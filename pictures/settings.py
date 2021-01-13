@@ -91,7 +91,7 @@ if config('MODE')=="dev":
            'NAME':'gallery',
            'USER':'moringa',
            'PASSWORD':'1234',
-           'HOST':('praisegallery.herokuapp.com'),
+           'HOST':('*',"herokuapp.com"),
            'PORT': '',
        }
        
